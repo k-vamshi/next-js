@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Deploy Next JS App on AWS in 5 minutes</title>
+        <title>This is the title bro</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -14,10 +14,10 @@ export default function Home() {
           <a href="https://nextjs.org">Next.js!</a> is amazing! 😍
         </h1>
         <p>
-          This demo app is a part of tutorial:{" "}
+          Deploy Deploy Deploy
           <strong>
-            <a href="https://dev.to/mubbashir10/host-next-js-app-on-aws-within-5-minutes-with-ci-cd-1o0a">
-              Deploy Next JS App on AWS in 5 minutes
+            <a href="https:google.com">
+              hmm, hmm, hmm
             </a>
           </strong>{" "}
         </p>
@@ -25,7 +25,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a href="https://mubbashir.me">
-          Thank you so much for following along! - Mubbashir
+          Next is not cool for seo and social sharing! - Vamshi
         </a>
       </footer>
     </div>
