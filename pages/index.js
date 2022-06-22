@@ -57,5 +57,5 @@ export const getStaticProps = async => {
     "metaDescription": "This is the default description buddy, boom boom boom",
     "metaImage": "https://www.byeindonesia.com/og-bye-indonesia.png"
   }
-  return { props: seoData, revalidate: 10 };
+  return { props: seoData, revalidate: 60 };
 };
