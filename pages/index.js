@@ -48,10 +48,14 @@ export default function Home(seoData) {
 }
 
 export const getStaticProps = async => {
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
   const seoData = {
-    "metaTitle": "This is the title dude",
+    "metaTitle": dateTime,
     "metaDescription": "This is the default description buddy, boom boom boom",
     "metaImage": "https://www.byeindonesia.com/og-bye-indonesia.png"
   }
-  return { props: seoData };
+  return { props: seoData, revalidate: 10 };
 };
