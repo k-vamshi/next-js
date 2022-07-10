@@ -1,7 +1,16 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import ErrorBoundary from "../components/error.js";
 
 export default function Home(seoData) {
+  return (
+    <ErrorBoundary>
+      <ComponentThatMayThrow seoData = {seoData}/>
+    </ErrorBoundary>
+  );
+}
+
+function ComponentThatMayThrow({ seoData }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -29,10 +38,10 @@ export default function Home(seoData) {
           <a href="https://nextjs.org">Next.js!</a> is amazing! 😍
         </h1>
         <p>
-          Deploy Deploy Deploy
+          Deploy Deploy Deploy -{" "}
           <strong>
             <a href="https:google.com">
-              hmm, hmm, hmm
+              {seoData2.metaTitle}
             </a>
           </strong>{" "}
         </p>
@@ -57,5 +66,5 @@ export const getStaticProps = async => {
     "metaDescription": "This is the default description buddy, boom boom boom",
     "metaImage": "https://www.byeindonesia.com/og-bye-indonesia.png"
   }
-  return { props: seoData };
+  return { props: seoData, revalidate: 10 };
 };
