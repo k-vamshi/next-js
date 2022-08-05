@@ -41,7 +41,7 @@ function ComponentThatMayThrow({ seoData }) {
           Deploy Deploy Deploy -{" "}
           <strong>
             <a href="https:google.com">
-              {seoData2.metaTitle}
+              {seoData.metaTitle}
             </a>
           </strong>{" "}
         </p>
